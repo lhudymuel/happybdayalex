@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>A Birthday Wish ♡</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body class="wish-page">
+
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="wish-background">
+
+        <span>♡</span>
+        <span>✦</span>
+        <span>🌸</span>
+        <span>✧</span>
+        <span>♡</span>
+        <span>🌷</span>
+        <span>🦋</span>
+
+    </div>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="wish-container">
+
+
+        <div class="wish-label">
+
+            ✦ A LITTLE SOMETHING FOR YOU ✦
+
+        </div>
+
+
+        <h1>
+
+            Make a
+
+            <span>Wish ♡</span>
+
+        </h1>
+
+
+        <p class="wish-intro">
+
+            Before we continue...
+
+            there's one thing I want you to do.
+
+            <br><br>
+
+            Close your eyes for a moment.
+
+            Think of something you've been hoping for.
+
+            Something you've been wishing for.
+
+            Something that would make you genuinely happy.
+
+        </p>
+
+
+        <!-- =========================
+             CAKE
+        ========================== -->
+
+        <section class="cake-area">
+
+
+            <div class="cake">
+
+                <!-- Candles -->
+
+                <div class="candles">
+
+                    <div
+                        class="candle"
+                        id="candle1"
+                    >
+
+                        <div class="flame"></div>
+
+                    </div>
+
+
+                    <div
+                        class="candle"
+                        id="candle2"
+                    >
+
+                        <div class="flame"></div>
+
+                    </div>
+
+
+                    <div
+                        class="candle"
+                        id="candle3"
+                    >
+
+                        <div class="flame"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Cake -->
+
+                <div class="cake-top">
+
+                    <span>♡</span>
+
+                </div>
+
+                <div class="cake-middle"></div>
+
+                <div class="cake-bottom"></div>
+
+
+                <!-- Plate -->
+
+                <div class="cake-plate"></div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             WISH BUTTON
+        ========================== -->
+
+        <button
+            id="wishButton"
+            class="wish-button"
+            onclick="makeWish()"
+        >
+
+            ✨ Make My Wish
+
+        </button>
+
+
+        <!-- =========================
+             WISH MESSAGE
+        ========================== -->
+
+        <section
+            id="wishMessage"
+            class="wish-message"
+        >
+
+            <div class="wish-sparkle">
+
+                ✨
+
+            </div>
+
+
+            <h2>
+
+                I Hope Your Wish Comes True
+
+            </h2>
+
+
+            <p>
+
+                Whatever you wished for...
+
+                I hope life finds a way to bring it
+                closer to you.
+
+                <br><br>
+
+                And more than anything,
+
+                I hope this new chapter of your life
+                gives you plenty of reasons to smile.
+
+            </p>
+
+
+            <div class="wish-heart">
+
+                ♡
+
+            </div>
+
+
+            <button
+                class="final-button"
+                onclick="openFinalSurprise()"
+            >
+
+                🔐 One Last Thing...
+
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        function makeWish() {
+
+            const flames =
+                document.querySelectorAll(".flame");
+
+            flames.forEach((flame) => {
+
+                flame.classList.add("blown");
+
+            });
+
+
+            const button =
+                document.getElementById("wishButton");
+
+            button.disabled = true;
+
+            button.innerHTML =
+                "💫 Wish Made ♡";
+
+            button.classList.add("wish-complete");
+
+
+            setTimeout(() => {
+
+                document
+                    .getElementById("wishMessage")
+                    .classList.add("show");
+
+            }, 900);
+
+        }
+
+
+   function openFinalSurprise() {
+
+    document.body.style.transition =
+        "opacity 0.8s ease";
+
+    document.body.style.opacity =
+        "0";
+
+    setTimeout(() => {
+
+        window.location.href =
+            "final.html?playMusic=true";
+
+    }, 800);
+
+}
+
+    </script>
+
+
+</body>
+
+</html>
