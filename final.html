@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>One Last Thing ♡</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        /* =========================
+           FRIENDSHIP VERIFICATION
+        ========================== */
+
+        .verification {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .verification.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .verification-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .verification h2 {
+            margin-bottom: 15px;
+        }
+
+        .verification h2 span {
+            display: block;
+        }
+
+        .verification-intro {
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .question-box {
+            animation: questionAppear 0.6s ease;
+        }
+
+        .question-box.hidden {
+            display: none;
+        }
+
+        .question-number {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            opacity: 0.7;
+        }
+
+        .question-box h3 {
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .choices {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .choices button {
+            padding: 15px 12px;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .choices button:hover {
+            transform: translateY(-3px);
+        }
+
+        .verification-result {
+            margin-top: 25px;
+            animation: questionAppear 0.7s ease;
+        }
+
+        .success-icon,
+        .error-icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .verification-result h3 {
+            margin-bottom: 10px;
+        }
+
+        .verification-result p {
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        @keyframes questionAppear {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .choices {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="final-page">
+
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="final-background">
+
+        <span>♡</span>
+        <span>✦</span>
+        <span>🌸</span>
+        <span>♡</span>
+        <span>🦋</span>
+        <span>✧</span>
+        <span>🌷</span>
+        <span>♡</span>
+
+    </div>
+
+
+    <!-- =========================
+         FINAL CONTAINER
+    ========================== -->
+
+    <main class="final-container">
+
+
+        <!-- =========================
+             LOCKED INTRO
+        ========================== -->
+
+        <section
+            id="finalIntro"
+            class="final-intro"
+        >
+
+            <div class="final-lock">
+
+                🔐
+
+            </div>
+
+
+            <span class="final-system">
+
+                PRIVATE FRIENDSHIP ARCHIVE
+
+            </span>
+
+
+            <h1>
+
+                One Last
+
+                <span>Thing...</span>
+
+            </h1>
+
+
+            <p>
+
+                You've made it through
+                the entire little journey.
+
+                <br><br>
+
+                But there's one message
+                I saved specifically for you.
+
+            </p>
+
+
+            <button
+                class="unlock-button"
+                onclick="showVerification()"
+            >
+
+                🔓 Open The Final Message
+
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             FRIENDSHIP VERIFICATION
+        ========================== -->
+
+        <section
+            id="verification"
+            class="verification"
+        >
+
+            <div class="verification-icon">
+
+                🔐
+
+            </div>
+
+
+            <span class="final-system">
+
+                FRIENDSHIP VERIFICATION
+
+            </span>
+
+
+            <h2>
+
+                Prove you're really
+
+                <span>Alex ♡</span>
+
+            </h2>
+
+
+            <p class="verification-intro">
+
+                Before I let you see the final message...
+
+                <br>
+
+                Let's see if you still remember
+                our little things. 😂
+
+            </p>
+
+
+            <!-- =========================
+                 QUESTION 1
+            ========================== -->
+
+            <div
+                class="question-box"
+                id="question1"
+            >
+
+                <span class="question-number">
+
+                    QUESTION 1 OF 3
+
+                </span>
+
+
+                <h3>
+
+                    What is your favorite gun in PUBG?
+
+                </h3>
+
+
+                <div class="choices">
+
+                    <button
+                        onclick="answerQuestion(1, 'A')"
+                    >
+
+                        🔫 DP
+
+                    </button>
+
+
+                    <button
+                        onclick="answerQuestion(1, 'B')"
+                    >
+
+                        🔫 AKM
+
+                    </button>
+
+
+                    <button
+                        onclick="answerQuestion(1, 'C')"
+                    >
+
+                        🔫 SCAR-L
+
+                    </button>
+
+
+                    <button
+                        onclick="answerQuestion(1, 'D')"
+                    >
+
+                        🔫 M416
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 QUESTION 2
+            ========================== -->
+
+            <div
+                class="question-box hidden"
+                id="question2"
+            >
+
+                <span class="question-number">
+
+                    QUESTION 2 OF 3
+
+                </span>
+
+
+                <h3>
+
+                  What’s my dog’s name? 🐶
+
+
+                </h3>
+
+
+                <div class="choices">
+
+                    <button
+                        onclick="answerQuestion(2, 'A')"
+                    >
+
+                        Andra
+
+                    </button>
+
+
+                    <button
+                        onclick="answerQuestion(2, 'B')"
+                    >
+
+                        Leon
+
+                    </button>
+
+
+                    <button
+                        onclick="answerQuestion(2, 'C')"
+                    >
+
+                        Charlie
+
+                    </button>
+
+
+                    <button
+                        onclick="answerQuestion(2, 'D')"
+                    >
+
+                        Luna
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 QUESTION 3
+            ========================== -->
+
+            <div
+                class="question-box hidden"
+                id="question3"
+            >
+
+                <span class="question-number">
+
+                    QUESTION 3 OF 3
+
+                </span>
+
+
+                <h3>
+
+                    How long have we been friends?
+
+                </h3>
+
+
+                <div class="choices">
+
+                    <button
+                        onclick="answerQuestion(3, 'A')"
+                    >
+
+                        💕 3 Years
+
+                    </button>
+
+
+                    <button
+                        onclick="answerQuestion(3, 'B')"
+                    >
+
+                        💕 4 Years
+
+                    </button>
+
+
+                    <button
+                        onclick="answerQuestion(3, 'C')"
+                    >
+
+                        💕 5 Years
+
+                    </button>
+
+
+                    <button
+                        onclick="answerQuestion(3, 'D')"
+                    >
+
+                        💕 6 Years
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 VERIFICATION RESULT
+            ========================== -->
+
+            <div
+                id="verificationResult"
+                class="verification-result"
+            >
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FINAL MESSAGE
+        ========================== -->
+
+        <section
+            id="finalMessage"
+            class="final-message"
+        >
+
+
+            <div class="final-flower">
+
+                🌷
+
+            </div>
+
+
+            <span class="final-label">
+
+                TO SOMEONE VERY SPECIAL
+
+            </span>
+
+
+            <h2>
+
+                Happy Birthday,
+
+                <span>Beautiful Soul ♡</span>
+
+            </h2>
+
+
+            <div class="final-divider">
+
+                ✦ ───────── ✦
+
+            </div>
+
+
+            <!-- PERSONAL MESSAGE -->
+
+            <div class="final-letter">
+
+
+                <p>
+
+                    Five years.
+
+                </p>
+
+
+                <p>
+
+                    Honestly, when I think about it,
+                    I don't even know how five years
+                    passed so quickly.
+
+                </p>
+
+
+                <p>
+
+                    We've been through different
+                    seasons of life, different places,
+                    different situations and so many
+                    changes.
+
+                    And even though distance means
+                    we can't always be there beside
+                    each other...
+
+                    somehow, our friendship never
+                    really felt distant.
+
+                </p>
+
+
+                <p>
+
+                    That's something I'll always be
+                    grateful for.
+
+                </p>
+
+
+                <p>
+
+                    You're one of those people who
+                    became a part of my life without
+                    me realizing just how important
+                    that would become.
+
+                </p>
+
+
+                <p>
+
+                    And after five years, I just want
+                    you to know that I'm genuinely
+                    thankful that I met you.
+
+                </p>
+
+
+                <p>
+
+                    Thank you for every conversation.
+
+                    Every laugh.
+
+                    Every random moment.
+
+                    Every memory.
+
+                    And even the moments where we
+                    didn't talk but somehow still
+                    remained friends.
+
+                </p>
+
+
+                <p>
+
+                    I hope you never forget how
+                    special you are.
+
+                </p>
+
+
+                <p>
+
+                    Not just today because it's your
+                    birthday...
+
+                    but every day.
+
+                </p>
+
+
+                <p class="final-highlight">
+
+                    I hope life is kind to you.
+
+                    I hope you achieve the things
+                    you've been dreaming about.
+
+                    I hope you meet people who
+                    appreciate your heart.
+
+                    And I hope you always have a
+                    reason to smile. My PUBG BUDDY!
+
+                </p>
+
+
+                <p>
+
+                    And wherever life takes us...
+
+                    I hope we never become strangers.
+
+                </p>
+
+
+                <p>
+
+                    five years down.
+
+                    Hopefully many more to go.
+
+                </p>
+
+
+                <p class="signature">
+
+                    Happy Birthday. ♡
+
+                    <br><br>
+
+                    I'm really glad you're part
+                    of my story. Oh wag iiyak ha
+                    enjoy mo lang birthday mo.
+                    Hahaha (alam konaman dika iiyak tho,
+                    pero incase hahaha)
+
+                </p>
+
+
+            </div>
+
+
+            <!-- =========================
+                 YEARS BADGE
+            ========================== -->
+
+            <div class="final-years">
+
+                <strong>
+
+                    5
+
+                </strong>
+
+                <span>
+
+                    YEARS
+
+                    <br>
+
+                    OF FRIENDSHIP
+
+                </span>
+
+            </div>
+
+
+            <!-- =========================
+                 FINAL BUTTON
+            ========================== -->
+
+            <button
+                class="forever-button"
+                onclick="showEnding()"
+            >
+
+                🌸 Keep This Message
+
+            </button>
+
+
+        </section>
+
+
+        <!-- =========================
+             FINAL ENDING
+        ========================== -->
+
+        <section
+            id="finalEnding"
+            class="final-ending"
+        >
+
+
+            <div class="ending-hearts">
+
+                ♡　♡　♡
+
+            </div>
+
+
+            <div class="big-heart">
+
+                💗
+
+            </div>
+
+
+            <h2>
+
+                And that's it.
+
+            </h2>
+
+
+            <p>
+
+                No more surprises.
+
+                <br>
+
+                No more hidden pages.
+
+                <br><br>
+
+                Just one simple truth:
+
+            </p>
+
+
+            <h3>
+
+                I'm really lucky
+
+                <span>
+
+                    to call you my friend.
+
+                </span>
+
+            </h3>
+
+
+            <div class="ending-flower">
+
+                🌷
+
+            </div>
+
+
+            <p class="ending-small">
+
+                Happy Birthday, always.
+                Enjoy your special day!♡
+
+            </p>
+
+
+            <div class="ending-year">
+
+                2021 — ∞
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         BIRTHDAY MUSIC
+    ========================== -->
+
+    <audio
+        id="birthdayMusic"
+        loop
+        preload="auto"
+    >
+
+        <source
+            src="assets/music/sepfinal.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+    <script>
+
+
+        /* =========================
+           FRIENDSHIP VERIFICATION
+        ========================== */
+
+
+        let currentQuestion = 1;
+
+        let correctCount = 0;
+
+
+        /*
+         * ==========================================
+         * CHANGE THE CORRECT ANSWERS HERE
+         * ==========================================
+         *
+         * Question 1:
+         * A = M416
+         * B = AKM
+         * C = SCAR-L
+         * D = UMP45
+         *
+         * Question 2:
+         * A = PUBG
+         * B = Minecraft
+         * C = Roblox
+         * D = Valorant
+         *
+         * Question 3:
+         * A = 3 Years
+         * B = 4 Years
+         * C = 5 Years
+         * D = 6 Years
+         *
+         * She needs at least 2/3 correct.
+         */
+
+
+        const correctAnswers = {
+
+            1: "A",
+
+            2: "A",
+
+            3: "C"
+
+        };
+
+
+        /* =========================
+           SHOW VERIFICATION
+        ========================== */
+
+        function showVerification() {
+
+
+            const intro =
+                document.getElementById(
+                    "finalIntro"
+                );
+
+
+            const verification =
+                document.getElementById(
+                    "verification"
+                );
+
+
+            intro.style.display = "none";
+
+
+            verification.classList.add(
+                "show"
+            );
+
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+        /* =========================
+           ANSWER QUESTION
+        ========================== */
+
+        function answerQuestion(
+            question,
+            answer
+        ) {
+
+
+            /*
+             * Check if answer is correct
+             */
+
+            if (
+                answer ===
+                correctAnswers[question]
+            ) {
+
+                correctCount++;
+
+            }
+
+
+            /*
+             * Hide current question
+             */
+
+            const current =
+                document.getElementById(
+                    "question" + question
+                );
+
+
+            current.classList.add(
+                "hidden"
+            );
+
+
+            /*
+             * Go to next question
+             */
+
+            if (question < 3) {
+
+
+                currentQuestion++;
+
+
+                const next =
+                    document.getElementById(
+                        "question" +
+                        currentQuestion
+                    );
+
+
+                next.classList.remove(
+                    "hidden"
+                );
+
+
+            }
+
+
+            /*
+             * All questions answered
+             */
+
+            else {
+
+                showVerificationResult();
+
+            }
+
+        }
+
+
+        /* =========================
+           SHOW VERIFICATION RESULT
+        ========================== */
+
+        function showVerificationResult() {
+
+
+            const result =
+                document.getElementById(
+                    "verificationResult"
+                );
+
+
+            /*
+             * 2/3 OR 3/3 = SUCCESS
+             */
+
+            if (correctCount >= 3) {
+
+
+                result.innerHTML = `
+
+                    <div class="success-icon">
+                        💗
+                    </div>
+
+                    <h3>
+                        Verification Successful! ♡
+                    </h3>
+
+                    <p>
+                        Okay... I know it's really you. 😂
+                        <br>
+                        Come on in, my fav friend.
+                    </p>
+
+                    <button
+                        class="unlock-button"
+                        onclick="unlockFinal()"
+                    >
+                        💌 Open My Final Message
+                    </button>
+
+                `;
+
+
+            }
+
+
+            /*
+             * 0/3 OR 1/3 = FAILED
+             */
+
+            else {
+
+
+                result.innerHTML = `
+
+                    <div class="error-icon">
+                        😂
+                    </div>
+
+                    <h3>
+                        Hmm... I'm not convinced.
+                    </h3>
+
+                    <p>
+
+                        You only got
+                        <strong>
+                            ${correctCount}/3
+                        </strong>
+                        correct.
+
+                        <br><br>
+
+                        Are you really Alex? 😭
+
+                    </p>
+
+                    <button
+                        class="unlock-button"
+                        onclick="restartVerification()"
+                    >
+                        🔄 Try Again
+                    </button>
+
+                `;
+
+            }
+
+        }
+
+
+        /* =========================
+           RESTART VERIFICATION
+        ========================== */
+
+        function restartVerification() {
+
+
+            /*
+             * Reset score
+             */
+
+            correctCount = 0;
+
+            currentQuestion = 1;
+
+
+            /*
+             * Clear result
+             */
+
+            document.getElementById(
+                "verificationResult"
+            ).innerHTML = "";
+
+
+            /*
+             * Hide all questions
+             */
+
+            document
+                .querySelectorAll(
+                    ".question-box"
+                )
+                .forEach(
+                    function(box) {
+
+                        box.classList.add(
+                            "hidden"
+                        );
+
+                    }
+                );
+
+
+            /*
+             * Show question 1
+             */
+
+            document.getElementById(
+                "question1"
+            ).classList.remove(
+                "hidden"
+            );
+
+
+            /*
+             * Scroll back to question
+             */
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+        /* =========================
+           UNLOCK FINAL MESSAGE
+        ========================== */
+
+        function unlockFinal() {
+
+
+            const verification =
+                document.getElementById(
+                    "verification"
+                );
+
+
+            const message =
+                document.getElementById(
+                    "finalMessage"
+                );
+
+
+            verification.style.display =
+                "none";
+
+
+            message.classList.add(
+                "show"
+            );
+
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+        /* =========================
+           SHOW ENDING
+        ========================== */
+
+        function showEnding() {
+
+
+            const message =
+                document.getElementById(
+                    "finalMessage"
+                );
+
+
+            const ending =
+                document.getElementById(
+                    "finalEnding"
+                );
+
+
+            message.classList.add(
+                "finished"
+            );
+
+
+            setTimeout(
+                function() {
+
+
+                    ending.classList.add(
+                        "show"
+                    );
+
+
+                    ending.scrollIntoView({
+
+                        behavior: "smooth"
+
+                    });
+
+
+                    createHeartBurst();
+
+
+                },
+                700
+            );
+
+        }
+
+
+        /* =========================
+           HEART BURST
+        ========================== */
+
+        function createHeartBurst() {
+
+
+            const hearts = [
+
+                "♡",
+                "💗",
+                "🌸",
+                "✨",
+                "💕",
+                "🌷"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 25;
+                i++
+            ) {
+
+
+                const heart =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                heart.className =
+                    "burst-heart";
+
+
+                heart.innerHTML =
+                    hearts[
+                        Math.floor(
+                            Math.random()
+                            * hearts.length
+                        )
+                    ];
+
+
+                heart.style.left =
+                    Math.random() * 100 + "%";
+
+
+                heart.style.animationDelay =
+                    Math.random() * 1.5 + "s";
+
+
+                heart.style.fontSize =
+                    (
+                        12 +
+                        Math.random() * 18
+                    ) + "px";
+
+
+                document.body.appendChild(
+                    heart
+                );
+
+
+                setTimeout(
+                    function() {
+
+                        heart.remove();
+
+                    },
+                    4000
+                );
+
+            }
+
+        }
+
+
+        /* =========================
+           BIRTHDAY MUSIC
+        ========================== */
+
+        const music =
+            document.getElementById(
+                "birthdayMusic"
+            );
+
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        if (
+            params.get("playMusic") ===
+            "true"
+        ) {
+
+
+            music.volume = 0.35;
+
+
+            music.play().catch(
+                function(error) {
+
+                    console.log(
+                        "Browser blocked autoplay:",
+                        error
+                    );
+
+                }
+            );
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
